@@ -12,6 +12,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Models;
 using SalesWebMvc.Data;
+<<<<<<< HEAD
+=======
+using SalesWebMvc.Services;
+>>>>>>> 6c314c3999929039513af22d29fbd84183a8d758
 
 namespace SalesWebMvc
 {
@@ -42,14 +46,20 @@ namespace SalesWebMvc
                     builder.MigrationsAssembly("SalesWebMvc")));
 
             services.AddScoped<SeedingService>();
+<<<<<<< HEAD
+=======
+            services.AddScoped<SellerService>();
+            services.AddScoped<DepartmentService>();
+>>>>>>> 6c314c3999929039513af22d29fbd84183a8d758
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingService seedingService)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                seedingService.Seed();
             }
             else
             {
