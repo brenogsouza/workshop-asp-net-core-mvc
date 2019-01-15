@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using SalesWebMvc.Models;
-=======
-﻿using SalesWebMvc.Models;
 using SalesWebMvc.Models.Enums;
 using System;
 using System.Linq;
->>>>>>> 6c314c3999929039513af22d29fbd84183a8d758
 
 namespace SalesWebMvc.Data
 {
@@ -28,22 +20,13 @@ namespace SalesWebMvc.Data
                 _context.Seller.Any() ||
                 _context.SalesRecord.Any())
             {
-<<<<<<< HEAD
-                return; //DB has been seeded
-=======
                 return; // DB has been seeded
->>>>>>> 6c314c3999929039513af22d29fbd84183a8d758
             }
 
             Department d1 = new Department(1, "Computers");
             Department d2 = new Department(2, "Electronics");
             Department d3 = new Department(3, "Fashion");
             Department d4 = new Department(4, "Books");
-<<<<<<< HEAD
-            Department d5 = new Department(5, "Games");
-
-=======
->>>>>>> 6c314c3999929039513af22d29fbd84183a8d758
 
             Seller s1 = new Seller(1, "Bob Brown", "bob@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
             Seller s2 = new Seller(2, "Maria Green", "maria@gmail.com", new DateTime(1979, 12, 31), 3500.0, d2);
@@ -84,9 +67,6 @@ namespace SalesWebMvc.Data
             SalesRecord r30 = new SalesRecord(30, new DateTime(2018, 10, 12), 5000.0, SaleStatus.Billed, s2);
 
 
-<<<<<<< HEAD
-        }
-=======
             _context.Department.AddRange(d1, d2, d3, d4);
 
             _context.Seller.AddRange(s1, s2, s3, s4, s5, s6);
@@ -101,6 +81,5 @@ namespace SalesWebMvc.Data
 
         }
 
->>>>>>> 6c314c3999929039513af22d29fbd84183a8d758
     }
 }

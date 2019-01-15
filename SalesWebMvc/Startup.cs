@@ -12,10 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Models;
 using SalesWebMvc.Data;
-<<<<<<< HEAD
-=======
 using SalesWebMvc.Services;
->>>>>>> 6c314c3999929039513af22d29fbd84183a8d758
+
 
 namespace SalesWebMvc
 {
@@ -42,15 +40,14 @@ namespace SalesWebMvc
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<SalesWebMvcContext>(options =>
-                    options.UseMySql(Configuration.GetConnectionString("SalesWebMvcContext"), builder => 
+                    options.UseMySql(Configuration.GetConnectionString("SalesWebMvcContext"), builder =>
                     builder.MigrationsAssembly("SalesWebMvc")));
 
             services.AddScoped<SeedingService>();
-<<<<<<< HEAD
-=======
+
             services.AddScoped<SellerService>();
             services.AddScoped<DepartmentService>();
->>>>>>> 6c314c3999929039513af22d29fbd84183a8d758
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
